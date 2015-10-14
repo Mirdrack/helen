@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/helen.cpp : src/helen.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/helen.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/helen.cpp
+	@true
+
